@@ -1,40 +1,40 @@
-T_base               real          1.75e8_rt      
+T_base               real          1.75e8      
 
-T_star               real          1.e7_rt        
+T_star               real          1.e7        
 
-T_lo                 real          7.5e7_rt       
+T_lo                 real          7.5e7       
 
-nx                   real          500_rt         
+nx                   real          500      
 
-x_min                real          0._rt          
+x_min                real          0.        
 
-x_max                real          1.e9_rt        
+x_max                real          1.e9       
 
-H_star               real          8.e7_rt        
+H_star               real          8.e7      
 
-g_const              real         -1.1742e9_rt    
+g_const              real         -1.1742e9   
 
-dens_base            real          1.e8_rt        
+dens_base            real          1.e8      
 
-delta                real          50.e5_rt       
+delta                real          50.e5      
 
-cfrac_env            real           0.00_rt       
+cfrac_env            real           0.00       
 
-cfrac_core           real          0.45_rt        
+cfrac_core           real          0.45       
 
-nfrac_env            real          0.0_rt         
+nfrac_env            real          0.0       
 
-nfrac_core           real         0.0_rt          
+nfrac_core           real         0.0         
 
-ofrac_env            real          0.0_rt         
+ofrac_env            real          0.0         
 
-ofrac_core           real          0.45_rt        
+ofrac_core           real          0.45       
 
 model_prefix         character    "model"
 
 index_base_from_temp  integer      0
 
-smallx               real          1.e-12_rt      
+smallx               real          1.e-12      
 
 g_const              real         -2.450e14
 
