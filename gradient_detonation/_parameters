@@ -1,0 +1,41 @@
+T_base               real          1.75e8_rt      y
+
+T_star               real          1.e7_rt        y
+
+T_lo                 real          7.5e7_rt       y
+
+nx                   real          500_rt         y
+
+x_min                real          0._rt          y
+
+x_max                real          1.e9_rt        y
+
+H_star               real          8.e7_rt        y
+
+g_const              real         -1.1742e9_rt    y
+
+dens_base            real          1.e8_rt        y
+
+delta                real          50.e5_rt       y
+
+cfrac_env            real           0.00_rt       y
+
+cfrac_core           real          0.45_rt        y
+
+nfrac_env            real          0.0_rt         y
+
+nfrac_core           real         0.0_rt          y
+
+ofrac_env            real          0.0_rt         y
+
+ofrac_core           real          0.45_rt        y
+
+model_prefix         character    "model"
+
+index_base_from_temp  integer      0
+
+smallx               real          1.e-12_rt      y
+
+g_const              real         -2.450e14
+
+low_density_cutoff  real          1.e-4

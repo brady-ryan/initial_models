@@ -1,0 +1,27 @@
+problem.model_prefix = "toy_subch"
+
+problem.nx = 500
+
+problem.dens_base = 1.117e6
+
+problem.T_star = 1.e7
+problem.T_base = 1.75e8
+problem.T_lo   = 7.5e7
+
+problem.H_star = 8.e7
+problem.delta  = 5.e6
+
+problem.cfrac_core = 0.5
+problem.ofrac_core = 0.5
+
+problem.hefrac_env = 0.99
+problem.nfrac_env = 0.01
+
+problem.xmin = 0.0
+problem.xmax = 1.e9
+
+problem.g_const = -1.1742e9
+
+problem.low_density_cutoff = 1.e-4
+
+problem.index_base_from_temp = 1
