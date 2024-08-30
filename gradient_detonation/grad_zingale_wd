@@ -1,4 +1,4 @@
-problem.model_prefix = "toy_subch"
+problem.model_prefix = "grad_det"
 
 problem.nx = 500
 
