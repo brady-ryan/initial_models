@@ -20,12 +20,68 @@ AMREX_INLINE void init_1d()
 
     const Real smallx = 1.e-10_rt;
 
-    // get the species indices
+    int c_core = network_spec_index("carbon-12");
+    if (c_core < 0)
+        species_defined = false;
 
-    int carbon = network_spec_index("carbon-12");
-    int oxygen = network_spec_index("oxygen-16");
-    int nitrogen = network_spec_index("nitrogren-14");
-    int helium = network_spec_index("helium-4");
+    int n_core{-1};
+    if (problem_rp::nfrac_core != "")
+    {
+        n_core = network_spec_index("nitrogen-14");
+        if (n_core < 0)
+            species_defined = false;
+    }
+
+    int ox_core{-1};
+    if (problem_rp::ofrac_core != "")
+    {
+        ox_core = network_spec_index("oxygen-16");
+        if (ox_core < 0)
+            species_defined = false;
+    }
+
+    int he_core{-1};
+    if (problem_rp::hefrac_core != "")
+    {
+        he_core = network_spec_index("helium-4");
+        if (he_core < 0)
+            species_defined = false;
+    }
+
+    int c_env = network_spec_index("carbon-12");
+    if (c_env < 0)
+        species_defined = false;
+
+    int n_env{-1};
+    if (problem_rp::nfrac_env != "")
+    {
+        n_env = network_spec_index("nitrogen-14");
+        if (n_env < 0)
+            species_defined = false;
+    }
+
+    int o_env{-1};
+    if (problem_rp::ofrac_env != "")
+    {
+        o_env = network_spec_index("oxygen-16");
+        if (o_env < 0)
+            species_defined = false;
+    }
+
+    int he_env{-1};
+    if (problem_rp::hefrac_env != "")
+    {
+        he_env = network_spec_index("helium-4");
+        if (he_env < 0)
+            species_defined = false;
+    }
+
+    if (!species_defined)
+    {
+        std::cout << c_core << " " << o_core << " " << n_core << " " << he_core << std::endl;
+        std::cout << c_env << " " << o_env << " " << n_env << " " << he_env << std::endl;
+        amrex::Error("ERROR: species not defined");
+    }
 
     Real xn[NumSpec] = {0.0_rt};
 
@@ -33,19 +89,25 @@ AMREX_INLINE void init_1d()
 
     Real xn_star[NumSpec] = {smallx};
 
-    xn_star[carbon] = problem_rp::cfrac_core;
-    xn_star[nitrogen] = problem_rp::nfrac_core;
-    xn_star[oxygen] = problem_rp::ofrac_core;
-    xn_star[helium] = problem_rp::hefrac_core;
+    xn_star[c_core] = problem_rp::cfrac_core;
+    if (problem_rp::ofrac_core != "")
+        xn_star[o_core] = problem_rp::ofrac_core;
+    if (problem_rp::nfrac_core != "")
+        xn_star[n_core] = problem_rp::nfrac_core;
+    if (problem_rp::hefrac_core != "")
+        xn_star[he_core] = problem_rp::hefrac_core;
 
     // and the composition of the accreted layer
 
     Real xn_base[NumSpec] = {smallx};
 
-    xn_base[carbon] = problem_rp::cfrac_env;
-    xn_base[nitrogen] = problem_rp::nfrac_env;
-    xn_base[oxygen] = problem_rp::ofrac_env;
-    xn_base[helium] = problem_rp::hefrac_env;
+    xn_base[c_env] = problem_rp::cfrac_env;
+    if (problem_rp::ofrac_env != "")
+        xn_base[o_env] = problem_rp::ofrac_env;
+    if (problem_rp::nfrac_env != "")
+        xn_base[n_env] = problem_rp::nfrac_env;
+    if (problem_rp::hefrac_env != "")
+        xn_base[he_env] = problem_rp::hefrac_env;
 
     // check if they sum to 1
     double sum{0.0};
