@@ -18,16 +18,16 @@ dens_base            real          1.e8
 
 delta                real          50.e5      
 
-cfrac_env            real          0.00       
+hefrac_env           real          0.99
+hefrac_core          real          0.00
 
+cfrac_env            real          0.00       
 cfrac_core           real          0.45       
 
 nfrac_env            real          0.0       
-
 nfrac_core           real          0.0         
 
 ofrac_env            real          0.0         
-
 ofrac_core           real          0.45       
 
 model_prefix         character     "model"
