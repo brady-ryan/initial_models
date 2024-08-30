@@ -24,13 +24,13 @@ hefrac_env           real          0.99
 hefrac_core          real          0.00
 
 cfrac_env            real          0.00       
-cfrac_core           real          0.45       
+cfrac_core           real          0.5       
 
 nfrac_env            real          0.0       
 nfrac_core           real          0.0         
 
 ofrac_env            real          0.0         
-ofrac_core           real          0.45       
+ofrac_core           real          0.5      
 
 model_prefix         character     "model"
 
