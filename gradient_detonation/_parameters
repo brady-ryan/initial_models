@@ -12,30 +12,30 @@ x_max                real          1.e9
 
 H_star               real          8.e7      
 
-g_const              real         -1.1742e9   
+g_const              real          -1.1742e9   
 
 dens_base            real          1.e8      
 
 delta                real          50.e5      
 
-cfrac_env            real           0.00       
+cfrac_env            real          0.00       
 
 cfrac_core           real          0.45       
 
 nfrac_env            real          0.0       
 
-nfrac_core           real         0.0         
+nfrac_core           real          0.0         
 
 ofrac_env            real          0.0         
 
 ofrac_core           real          0.45       
 
-model_prefix         character    "model"
+model_prefix         character     "model"
 
-index_base_from_temp  integer      0
+index_base_from_temp integer       0
 
 smallx               real          1.e-12      
 
-g_const              real         -2.450e14
+g_const              real          -2.450e14
 
-low_density_cutoff  real          1.e-4
+low_density_cutoff   real           1.e-4
