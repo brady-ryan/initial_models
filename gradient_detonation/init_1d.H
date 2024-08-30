@@ -22,7 +22,7 @@ AMREX_INLINE void init_1d()
 
     int c_core = network_spec_index("carbon-12");
     int n_core = network_spec_index("nitrogen-14");
-    int ox_core = network_spec_index("oxygen-16");
+    int o_core = network_spec_index("oxygen-16");
     int he_core = network_spec_index("helium-4");
 
     int c_env = network_spec_index("carbon-12");
