@@ -8,9 +8,9 @@ T_lo                 real          7.5e7
 
 nx                   real          500      
 
-x_min                real          0.        
+xmin                real          0.        
 
-x_max                real          1.e9       
+xmax                real          1.e9       
 
 H_star               real          8.e7      
 
