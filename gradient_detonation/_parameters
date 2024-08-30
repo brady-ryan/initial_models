@@ -1,3 +1,5 @@
+@namespace: problem
+
 T_base               real          1.75e8      
 
 T_star               real          1.e7        
@@ -33,6 +35,10 @@ ofrac_core           real          0.45
 model_prefix         character     "model"
 
 index_base_from_temp integer       0
+
+do_invsq_grav        integer       0
+
+M_enclosed           real          2.e33
 
 smallx               real          1.e-12      
 
